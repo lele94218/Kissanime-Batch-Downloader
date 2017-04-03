@@ -99,9 +99,9 @@ for (i = (episodeLinks.length - startEpisode); i >= (episodeLinks.length - endEp
 			var data = $(result).find("#divDownload");  // download data
 
 			if (data == null || data == "" || data.length == 0){ // captcha maybe
-				console.log("Captcha detected at " + URL + episodeLinks[i]);
+				console.log("Captcha detected at " + episodeLinks[i]);
 				prompt("Captcha detected. Solve it by opening the link below in a new tab. After solving, press OK.",
-					defaultText=URL + episodeLinks[i]);
+					defaultText=episodeLinks[i]);
 				this.tryCount++;
 				$.ajax(this);  // retry
 				return;
